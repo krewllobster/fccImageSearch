@@ -16,13 +16,7 @@ app.get(['/api/search/:search-:offset', '/api/search/:search'], (req, res, next)
   const offset = req.params.offset || 1
   const searchTerm = req.params.search
 
-  api.addSearch(searchTerm).then(result => {
-    console.log('search term added to history')
-    console.log(result)
-  }).catch(err => {
-    console.log('error writing history to mongo db')
-    console.log(err)
-  })
+  api.addSearch(searchTerm)
 
   api.getSearchResults(searchTerm, offset).then(results => {
     res.json(results)
