@@ -1,9 +1,7 @@
 const mongoClient = require('mongodb').MongoClient
 const url = require('url')
 
-const mongoURL = 'mongodb://api:api@ds111559.mlab.com:11559/urlshortener'
-
-const db = mongoClient.connect(mongoURL)
+const db = mongoClient.connect(process.env.MONGO_URL)
 
 const addSearch = (searchTerm) => {
   const now = new Date()

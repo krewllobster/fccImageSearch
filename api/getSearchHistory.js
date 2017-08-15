@@ -1,8 +1,6 @@
 const mongoClient = require('mongodb').MongoClient
 
-const mongoURL = 'mongodb://api:api@ds111559.mlab.com:11559/urlshortener'
-
-const db = mongoClient.connect(mongoURL)
+const db = mongoClient.connect(process.env.MONGO_URL)
 
 const getSearchHistory = (searchTerm) => {
   return db.then(db => {
