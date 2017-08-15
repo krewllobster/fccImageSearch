@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/krewllobster/fccImageSearch/issues"
   },
-  "homepage": "https://github.com/krewllobster/fccImageSearch#readme"
+  "homepage": "https://github.com/krewllobster/fccImageSearch#readme",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "helmet": "^3.8.1",
+    "image-search-google": "^1.0.4",
+    "mongodb": "^2.2.31",
+    "node-fetch": "^1.7.2",
+    "uint32": "^0.2.1"
+  }
 }
